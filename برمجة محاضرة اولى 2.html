@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<top>
+  <meta charset="UTF-8">
+  <title>المحاضرة الأولى - القسم الثاني</title>
+  <link rel='stylesheet' href='./libs/fullPage/jquery.fullPage.css'>
+  <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="icon" href="images/logo.jpg">
+</top>
+
+<body oncopy="return false" oncut="return false" onpaste="return false">
+  <!-- partial:index.partial.html -->
+  <toper>
+    <h1 class="l-left" style="z-index:100;position:fixed"><a href="#firstSection">
+        <img src="./images/logo.jpg" class="logo-img">
+      </a>
+    </h1>
+  </toper>
+
+  <div id="fullpage">
+    <section class="vertical-scrolling">
+      <div class="row align-items-center h-100">
+        <div class="col-6 mx-auto">
+          <div style="text-align: center;font-size: 42px">
+            <h1 style="font-weight: bold;color: #00bfd8;height: 60px;">عملي برمجة 2</h1>
+            <h1 style="font-weight: bold;font-size: 56px">المحاضرة الأولى - القسم الثاني</h1>
+          </div>
+        </div>
+        <div class="col-6 mx-auto">
+          <div class="image-container">
+            <img class="img-fluid" src="./images/toper-teamwork.svg" alt="alternative">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="vertical-scrolling">
+
+      <div class="row align-items-center h-100">
+        <div class="col-6 mx-auto">
+          <div style="text-align: center">
+            <h1 style="font-weight: bold;color: #00bfd8;height: 42px;">الهدف</h1>
+            <p style="direction: rtl;font-size: 3em; margin-top: 1em">تعلم المفاهيم الأساسية والتعرف على المصفوفات</p>
+          </div>
+          <hr>
+          <div style="text-align: center">
+            <h1 style="font-weight: bold;color: #00bfd8;height: 42px;">المراجع</h1>
+            <p style="direction: rtl;font-size: 3em; margin-top: 1em">سيتم الاعتماد على المرجع
+              <a target="_blank"
+                href="http://sd.blackball.lv/library/Thinking_in_Java_4th_edition.pdf">Thinking In Java</a>
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div class="col-6 mx-auto">
+          <div class="image-container">
+            <img class="img-fluid" src="./images/toper-teamwork.svg" alt="alternative">
+          </div>
+        </div>
+      </div>
+
+
+
+    </section>
+    <section class="vertical-scrolling">
+      <div class="horizontal-scrolling text-center">
+        <div>
+          <h1 style="text-align: center;font-weight: bold;">
+            تمارين محلولة
+          </h1>
+        </div>
+        <div class="row px-2 p-5">
+          <div class="col-12">
+            <h2 style="direction: rtl;" class="mb-5">
+              <span style="color: teal;font-weight: bold;font-family: 'Markazi Text'">التمرين 1: </span>
+            أكتب برنامج لاجراء عملية حسابية بين رقمين بحيث يدخل المستخدم نوع العملية الحسابية وذلك باستخدام switch 
+</h2>
+          </div>
+          <div class="col-6">
+            <div class="row row justify-content-md-center">
+              <div class="col-md-auto text-left">
+                <div style="font-size: 16px" class="text-left">
+                  <pre style="color:#000020;background:#fad4b2;">			
+1. <span style='color:#800000; font-weight:bold; '>import</span><span style='color:#004a43; '> java</span><span style='color:#808030; '>.</span><span style='color:#004a43; '>util</span><span style='color:#808030; '>.</span><span style='color:#004a43; '>Scanner</span><span style='color:#800080; '>;</span>
+2. <span style='color:#800000; font-weight:bold; '>public</span> <span style='color:#800000; font-weight:bold; '>class</span> Calculator <span style='color:#800080; '>{</span>
+3.     <span style='color:#800000; font-weight:bold; '>public</span> <span style='color:#800000; font-weight:bold; '>static</span> <span style='color:#bb7977; '>void</span> main<span style='color:#808030; '>(</span><span style='color:#bb7977; font-weight:bold; '>String</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> args<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+4.         <span style='color:#bb7977; font-weight:bold; '>Scanner</span> reader <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> <span style='color:#bb7977; font-weight:bold; '>Scanner</span><span style='color:#808030; '>(</span><span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>in<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+5.         <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>print<span style='color:#808030; '>(</span><span style='color:#0000e6; '>"Enter two numbers: "</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+6.         <span style='color:#696969; '>// reads the next double from the keyboard</span>
+7.         <span style='color:#bb7977; '>double</span> first <span style='color:#808030; '>=</span> reader<span style='color:#808030; '>.</span>nextDouble<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+8.         <span style='color:#bb7977; '>double</span> second <span style='color:#808030; '>=</span> reader<span style='color:#808030; '>.</span>nextDouble<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+9.         <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>print<span style='color:#808030; '>(</span><span style='color:#0000e6; '>"Enter an operator (+, -, *, /): "</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+10.        <span style='color:#bb7977; '>char</span> operator <span style='color:#808030; '>=</span> reader<span style='color:#808030; '>.</span>next<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>.</span>charAt<span style='color:#808030; '>(</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+11.        <span style='color:#bb7977; '>double</span> result<span style='color:#800080; '>;</span>
+12.        <span style='color:#800000; font-weight:bold; '>switch</span><span style='color:#808030; '>(</span>operator<span style='color:#808030; '>)</span>
+13.        <span style='color:#800080; '>{</span>
+14.            <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#0000e6; '>'+'</span><span style='color:#808030; '>:</span>
+15.                result <span style='color:#808030; '>=</span> first <span style='color:#808030; '>+</span> second<span style='color:#800080; '>;</span>
+16.                <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+17.            <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#0000e6; '>'-'</span><span style='color:#808030; '>:</span>
+18.                result <span style='color:#808030; '>=</span> first <span style='color:#808030; '>-</span> second<span style='color:#800080; '>;</span>
+19.                <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+20.            <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#0000e6; '>'*'</span><span style='color:#808030; '>:</span>
+21.                result <span style='color:#808030; '>=</span> first <span style='color:#808030; '>*</span> second<span style='color:#800080; '>;</span>
+22.                <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+23.            <span style='color:#800000; font-weight:bold; '>case</span> <span style='color:#0000e6; '>'/'</span><span style='color:#808030; '>:</span>
+24.                result <span style='color:#808030; '>=</span> first <span style='color:#808030; '>/</span> second<span style='color:#800080; '>;</span>
+25.                <span style='color:#800000; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+26.            <span style='color:#696969; '>// operator doesn't match any case constant (+, -, *, /)</span>
+27.            <span style='color:#800000; font-weight:bold; '>default</span><span style='color:#808030; '>:</span>
+28.                <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>printf<span style='color:#808030; '>(</span><span style='color:#0000e6; '>"Error! operator is not correct"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+29.                <span style='color:#800000; font-weight:bold; '>return</span><span style='color:#800080; '>;</span>
+30.        <span style='color:#800080; '>}</span>
+31.        <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>printf<span style='color:#808030; '>(</span><span style='color:#0000e6; '>"%.1f %c %.1f = %.1f"</span><span style='color:#808030; '>,</span> first<span style='color:#808030; '>,</span> operator<span style='color:#808030; '>,</span> second<span style='color:#808030; '>,</span> result<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+32.    <span style='color:#800080; '>}</span>
+33.<span style='color:#800080; '>}</span>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 text-right" style="font-size: 1.5em;font-weight: 600;direction: rtl;">
+            <p>
+              <span style="color: teal">
+                السطر (1)
+              </span>
+              تضمين المكتبة للاستفادة من التوابع الجاهزة المخزنة ضمنها
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (2)
+              </span>
+              تعريف الصف calculations
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (3)
+              </span>
+              التابع main الأساسي
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (4,8)
+              </span>
+              الطلب من المستخدم ادخال الرقمين وقراءتهما من الدخل
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (9,10)
+              </span>
+              الطلب من المستخدم ادخال العملية وقراءتها من الدخل
+            </p>
+			
+			<p>
+              <span style="color: teal">
+                السطر (11,31)
+              </span>
+              تنفيذ العملية المطلوبة وطباعة النتيجة
+            </p>
+          </div>
+        </div>
+      </div>
+	  <div class="horizontal-scrolling text-center">
+        <div>
+          <h1 style="text-align: center;font-weight: bold;">
+            تمارين محلولة
+          </h1>
+        </div>
+        <div class="row px-2 p-5">
+          <div class="col-12">
+            <h2 style="direction: rtl;" class="mb-5">
+              <span style="color: teal;font-weight: bold;font-family: 'Markazi Text'">التمرين 2: </span>
+            أكتب برنامج لحساب المتوسط الحسابي لعناصر مصفوفة احادية
+</h2>
+          </div>
+          <div class="col-6">
+            <div class="row row justify-content-md-center">
+              <div class="col-md-auto text-left">
+                <div style="font-size: 16px" class="text-left">
+                  <pre style="color:#000020;background:#fad4b2;">			
+1. <span style='color:#800000; font-weight:bold; '>public</span> <span style='color:#800000; font-weight:bold; '>class</span> Average <span style='color:#800080; '>{</span>
+2.     <span style='color:#800000; font-weight:bold; '>public</span> <span style='color:#800000; font-weight:bold; '>static</span> <span style='color:#bb7977; '>void</span> main<span style='color:#808030; '>(</span><span style='color:#bb7977; font-weight:bold; '>String</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> args<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+3.         <span style='color:#bb7977; '>double</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> numArray <span style='color:#808030; '>=</span> <span style='color:#800080; '>{</span> <span style='color:#008000; '>45.3</span><span style='color:#808030; '>,</span> <span style='color:#008000; '>67.5</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>-</span><span style='color:#008000; '>45.6</span><span style='color:#808030; '>,</span> <span style='color:#008000; '>20.34</span><span style='color:#808030; '>,</span> <span style='color:#008000; '>33.0</span><span style='color:#808030; '>,</span> <span style='color:#008000; '>45.6</span> <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+4.         <span style='color:#bb7977; '>double</span> sum <span style='color:#808030; '>=</span> <span style='color:#008000; '>0.0</span><span style='color:#800080; '>;</span>
+5.         <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#bb7977; '>double</span> num<span style='color:#808030; '>:</span> numArray<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+6.            sum <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> num<span style='color:#800080; '>;</span>
+7.         <span style='color:#800080; '>}</span>
+8.         <span style='color:#bb7977; '>double</span> average <span style='color:#808030; '>=</span> sum <span style='color:#808030; '>/</span> numArray<span style='color:#808030; '>.</span>length<span style='color:#800080; '>;</span>
+9.         <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>format<span style='color:#808030; '>(</span><span style='color:#0000e6; '>"The average is: %.2f"</span><span style='color:#808030; '>,</span> average<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+10.    <span style='color:#800080; '>}</span>
+11.<span style='color:#800080; '>}</span>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 text-right" style="font-size: 1.5em;font-weight: 600;direction: rtl;">
+            <p>
+              <span style="color: teal">
+                السطر (1)
+              </span>
+              تعريف الصف Average
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (2)
+              </span>
+              التابع main الأساسي
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (3)
+              </span>
+              تعريف مصفوفة أحادية عشوائية القيم
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (4,7)
+              </span>
+              حساب مجموع عناصر المصفوفة
+            </p>
+			
+			<p>
+              <span style="color: teal">
+                السطر (8,9)
+              </span>
+              حساب الوسطي وطباعته
+            </p>
+          </div>
+        </div>
+      </div>
+	  <div class="horizontal-scrolling text-center">
+        <div>
+          <h1 style="text-align: center;font-weight: bold;">
+            تمارين محلولة
+          </h1>
+        </div>
+        <div class="row px-2 p-5">
+          <div class="col-12">
+            <h2 style="direction: rtl;" class="mb-5">
+              <span style="color: teal;font-weight: bold;font-family: 'Markazi Text'">التمرين 3:</span>
+            أكتب برنامج لترتيب مصفوفة احادية تصاعدياً
+</h2>
+          </div>
+          <div class="col-6">
+            <div class="row row justify-content-md-center">
+              <div class="col-md-auto text-left">
+                <div style="font-size: 16px" class="text-left">
+                  <pre style="color:#000020;background:#fad4b2;">			
+1. <span style='color:#800000; font-weight:bold; '>import</span><span style='color:#004a43; '> java</span><span style='color:#808030; '>.</span><span style='color:#004a43; '>util</span><span style='color:#808030; '>.</span><span style='color:#004a43; '>Scanner</span><span style='color:#800080; '>;</span>
+2. <span style='color:#800000; font-weight:bold; '>public</span> <span style='color:#800000; font-weight:bold; '>class</span> JavaExample 
+3. <span style='color:#800080; '>{</span>
+4.     <span style='color:#800000; font-weight:bold; '>public</span> <span style='color:#800000; font-weight:bold; '>static</span> <span style='color:#bb7977; '>void</span> main<span style='color:#808030; '>(</span><span style='color:#bb7977; font-weight:bold; '>String</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> args<span style='color:#808030; '>)</span> 
+5.     <span style='color:#800080; '>{</span>
+6.     	<span style='color:#bb7977; '>int</span> count<span style='color:#808030; '>,</span> temp<span style='color:#800080; '>;</span> 	
+7.     	<span style='color:#696969; '>//User inputs the array size</span>
+8.         <span style='color:#bb7977; font-weight:bold; '>Scanner</span> scan <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> <span style='color:#bb7977; font-weight:bold; '>Scanner</span><span style='color:#808030; '>(</span><span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>in<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+9.         <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>print<span style='color:#808030; '>(</span><span style='color:#0000e6; '>"Enter number of elements you want in the array: "</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+10.        count <span style='color:#808030; '>=</span> scan<span style='color:#808030; '>.</span>nextInt<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>  
+11.        <span style='color:#bb7977; '>int</span> num<span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> <span style='color:#bb7977; '>int</span><span style='color:#808030; '>[</span>count<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+12.        <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>println<span style='color:#808030; '>(</span><span style='color:#0000e6; '>"Enter array elements:"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+13.        <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#bb7977; '>int</span> i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i <span style='color:#808030; '>&lt;</span> count<span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span> 
+14.        <span style='color:#800080; '>{</span>
+15.            num<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span> <span style='color:#808030; '>=</span> scan<span style='color:#808030; '>.</span>nextInt<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+16.        <span style='color:#800080; '>}</span>
+17.        scan<span style='color:#808030; '>.</span>close<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+18.        <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#bb7977; '>int</span> i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i <span style='color:#808030; '>&lt;</span> count<span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span> 
+19.        <span style='color:#800080; '>{</span>
+20.            <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#bb7977; '>int</span> j <span style='color:#808030; '>=</span> i <span style='color:#808030; '>+</span> <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span> j <span style='color:#808030; '>&lt;</span> count<span style='color:#800080; '>;</span> j<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span> 
+21.                <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>num<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span> <span style='color:#808030; '>></span> num<span style='color:#808030; '>[</span>j<span style='color:#808030; '>]</span><span style='color:#808030; '>)</span> 
+22.                <span style='color:#800080; '>{</span>
+23.                    temp <span style='color:#808030; '>=</span> num<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+24.                    num<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span> <span style='color:#808030; '>=</span> num<span style='color:#808030; '>[</span>j<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+25.                    num<span style='color:#808030; '>[</span>j<span style='color:#808030; '>]</span> <span style='color:#808030; '>=</span> temp<span style='color:#800080; '>;</span>
+26.                <span style='color:#800080; '>}</span>
+27.            <span style='color:#800080; '>}</span>
+28.        <span style='color:#800080; '>}</span>
+29.        <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>print<span style='color:#808030; '>(</span><span style='color:#0000e6; '>"Array Elements in Ascending Order: "</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+30.        <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#bb7977; '>int</span> i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i <span style='color:#808030; '>&lt;</span> count <span style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span> 
+31.        <span style='color:#800080; '>{</span>
+32.            <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>print<span style='color:#808030; '>(</span>num<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span> <span style='color:#808030; '>+</span> <span style='color:#0000e6; '>", "</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+33.        <span style='color:#800080; '>}</span>
+34.        <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>print<span style='color:#808030; '>(</span>num<span style='color:#808030; '>[</span>count <span style='color:#808030; '>-</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+35.    <span style='color:#800080; '>}</span>
+36.<span style='color:#800080; '>}</span>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 text-right" style="font-size: 1.5em;font-weight: 600;direction: rtl;">
+            <p>
+              <span style="color: teal">
+                السطر (1)
+              </span>
+              تضمين المكتبة للاستفادة من التوابع الجاهزة المخزنة ضمنها
+            </p>
+			
+			<p>
+              <span style="color: teal">
+                السطر (2)
+              </span>
+              تعريف الصف JavaExample
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (4)
+              </span>
+              التابع main الأساسي
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (6,8)
+              </span>
+              تعريف المتحولات المطلوبة
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (9,10)
+              </span>
+              الطلب من المستخدم إدخال بعد المصفوفة وقراءته من الدخل
+            </p>
+			
+			<p>
+              <span style="color: teal">
+                السطر (11)
+              </span>
+              تعريف المصفوفة
+            </p>
+			
+			<p>
+              <span style="color: teal">
+                السطر (12,17)
+              </span>
+              الطلب من المستخدم إدخال عناصر المصفوفة وقراءتها من الدخل
+            </p>
+			
+			<p>
+              <span style="color: teal">
+                السطر (18,28)
+              </span>
+              فرز المصفوفة تصاعدياً
+            </p>
+			
+			<p>
+              <span style="color: teal">
+                السطر (29,34)
+              </span>
+              طباعة المصفوفة بعد الفرز
+            </p>
+          </div>
+        </div>
+      </div>
+	  <div class="horizontal-scrolling text-center">
+        <div>
+          <h1 style="text-align: center;font-weight: bold;">
+            تمارين محلولة
+          </h1>
+        </div>
+        <div class="row px-2 p-5">
+          <div class="col-12">
+            <h2 style="direction: rtl;" class="mb-5">
+              <span style="color: teal;font-weight: bold;font-family: 'Markazi Text'">التمرين 4:</span>
+            أكتب برنامج لجمع مصفوقتين ثنائيتين
+</h2>
+          </div>
+          <div class="col-6">
+            <div class="row row justify-content-md-center">
+              <div class="col-md-auto text-left">
+                <div style="font-size: 16px" class="text-left">
+                  <pre style="color:#000020;background:#fad4b2;">			
+1. <span style='color:#800000; font-weight:bold; '>public</span> <span style='color:#800000; font-weight:bold; '>class</span> AddMatrices <span style='color:#800080; '>{</span>
+2.     <span style='color:#800000; font-weight:bold; '>public</span> <span style='color:#800000; font-weight:bold; '>static</span> <span style='color:#bb7977; '>void</span> main<span style='color:#808030; '>(</span><span style='color:#bb7977; font-weight:bold; '>String</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> args<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+3.         <span style='color:#bb7977; '>int</span> rows <span style='color:#808030; '>=</span> <span style='color:#008c00; '>2</span><span style='color:#808030; '>,</span> columns <span style='color:#808030; '>=</span> <span style='color:#008c00; '>3</span><span style='color:#800080; '>;</span>
+4.         <span style='color:#bb7977; '>int</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> firstMatrix <span style='color:#808030; '>=</span> <span style='color:#800080; '>{</span> <span style='color:#800080; '>{</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>3</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>4</span><span style='color:#800080; '>}</span><span style='color:#808030; '>,</span> <span style='color:#800080; '>{</span><span style='color:#008c00; '>5</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>2</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>3</span><span style='color:#800080; '>}</span> <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+5.         <span style='color:#bb7977; '>int</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> secondMatrix <span style='color:#808030; '>=</span> <span style='color:#800080; '>{</span> <span style='color:#800080; '>{</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>4</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>5</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>3</span><span style='color:#800080; '>}</span><span style='color:#808030; '>,</span> <span style='color:#800080; '>{</span><span style='color:#008c00; '>5</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>6</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>3</span><span style='color:#800080; '>}</span> <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+6.         <span style='color:#696969; '>// Adding Two matrices</span>
+7.         <span style='color:#bb7977; '>int</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> sum <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>new</span> <span style='color:#bb7977; '>int</span><span style='color:#808030; '>[</span>rows<span style='color:#808030; '>]</span><span style='color:#808030; '>[</span>columns<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+8.         <span style='color:#800000; font-weight:bold; '>for</span><span style='color:#808030; '>(</span><span style='color:#bb7977; '>int</span> i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i <span style='color:#808030; '>&lt;</span> rows<span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+9.             <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#bb7977; '>int</span> j <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> j <span style='color:#808030; '>&lt;</span> columns<span style='color:#800080; '>;</span> j<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+10.                sum<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span style='color:#808030; '>[</span>j<span style='color:#808030; '>]</span> <span style='color:#808030; '>=</span> firstMatrix<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span style='color:#808030; '>[</span>j<span style='color:#808030; '>]</span> <span style='color:#808030; '>+</span> secondMatrix<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span style='color:#808030; '>[</span>j<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+11.            <span style='color:#800080; '>}</span>
+12.        <span style='color:#800080; '>}</span>
+13.        <span style='color:#696969; '>// Displaying the result</span>
+14.        <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>println<span style='color:#808030; '>(</span><span style='color:#0000e6; '>"Sum of two matrices is: "</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+15.        <span style='color:#800000; font-weight:bold; '>for</span><span style='color:#808030; '>(</span><span style='color:#bb7977; '>int</span><span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> row <span style='color:#808030; '>:</span> sum<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+16.            <span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#bb7977; '>int</span> column <span style='color:#808030; '>:</span> row<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+17.                <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>print<span style='color:#808030; '>(</span>column <span style='color:#808030; '>+</span> <span style='color:#0000e6; '>"    "</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+18.            <span style='color:#800080; '>}</span>
+19.            <span style='color:#bb7977; font-weight:bold; '>System</span><span style='color:#808030; '>.</span>out<span style='color:#808030; '>.</span>println<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+20.        <span style='color:#800080; '>}</span>
+21.    <span style='color:#800080; '>}</span>
+22.<span style='color:#800080; '>}</span>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 text-right" style="font-size: 1.5em;font-weight: 600;direction: rtl;">
+            <p>
+              <span style="color: teal">
+                السطر (1)
+              </span>
+              تعريف الصف AddMatrices
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (2)
+              </span>
+              التابع main الأساسي
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (3,5)
+              </span>
+              تعريف مصفوفتين ثنائيتين عدد أسطرهما 2 وعدد الأعمدة 3
+            </p>
+
+            <p>
+              <span style="color: teal">
+                السطر (6,12)
+              </span>
+              جمع عناصر المصفوفتين
+            </p>
+			
+			<p>
+              <span style="color: teal">
+                السطر (13,19)
+              </span>
+              طباعة المصفوفة الناتجة
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="vertical-scrolling">
+      <div class="horizontal-scrolling text-center">
+        <div>
+          <h1 style="text-align: center;font-weight: bold;">
+            تمارين غير محلولة
+          </h1>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto text-center">
+            <h2 style="direction: rtl; text-align: right;" class="mb-5">
+			•	أكتب برنامج بلغة الجافا يقوم بإرجاع موقع عنصر index في مصفوفة احادية مدخل من قبل المستخدم. <br/>
+•	أكتب برنامج بلغة الجافا لحذف عنصر من مصفوفة احادية. <br/>
+•	أكتب برنامج بلغة الجافا لإيجاد وطباعة أكبر عنصر وأصغر عنصر في مصفوفة احادية <br/>
+•	أكتب برنامج بلغة الجافا لإيجاد العناصر المتشابهة بين مصفوفتين احاديتين وطباعة هذه النتائج. <br/>
+•	أكتب برنامج بلغة الجافا يقوم بإدخال عناصر مصفوفة ثنائية من الأعداد الصحيحة وطباعتها وطباعة مجموع عناصركل سطر. <br/>
+
+</h2>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="vertical-scrolling">
+
+      <div class="row align-items-center h-100">
+        <div class="col-6 mx-auto">
+          <div style="text-align: right;margin-right: 16px;direction: rtl">
+            <h1 style="font-weight: bold;color: #00bfd8;height: 42px;font-size: 24px;">ماذا تعلمنا من هذه الجلسة</h1>
+            <br>
+            <ol class="text-right" style="font-size: 24px;font-family: 'Markazi Text'">
+              <li style="font-family: 'Markazi Text'">استخدام المصفوفات الأحادية والثنائية والتنقل بين عناصرها</li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-6 mx-auto">
+          <div class="image-container">
+            <img class="img-fluid" src="./images/toper-teamwork.svg" alt="alternative">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- partial -->
+  <script src='./libs/jquery/jquery.js'></script>
+  <script src='./libs/fullPage/scrolloverflow.min.js'></script>
+  <script src='./libs/fullPage/jquery.fullPage.min.js'></script>
+  <script src='./libs/popper/popper.min.js'></script>
+  <script src='./libs/bootstrap/bootstrap.min.js'></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
